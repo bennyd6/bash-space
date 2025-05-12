@@ -1,14 +1,14 @@
-import './App.css'
-import Home from './components/home'
-function App() {
+import './App.css';
+import Home from './components/home';
+import Service from './components/service';
 
+function App() {
   return (
-    <>
     <div className="main">
-      <Home></Home>
+      <Home />
+      <Service />
     </div>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;

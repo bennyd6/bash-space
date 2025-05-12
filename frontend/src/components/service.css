@@ -1,0 +1,29 @@
+.ser-main{
+    width: 100%;
+    height: 100vh;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ser-in-2{
+    /* width: 100%;
+    height: 80%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    gap: 20px;
+}
+
+.ser-in-1 h1 {
+  background: linear-gradient(95deg, #000000, rgb(64, 64, 64),#8E9841);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 300;
+  font-size: 80px;
+}
+
