@@ -104,3 +104,93 @@ font-size: 70px;
 }
 
 
+@media screen and (max-width: 1024px) {
+  .h-in {
+    flex-direction: column;
+    height: 90vh;
+    width: 95%;
+    padding: 40px 20px;
+    gap: 40px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* optional safeguard */
+  }
+
+  .h-in-1, .h-in-2 {
+    width: 100% !important; /* override base widths */
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* prevent any content leak */
+}
+
+.h-in-1{
+      height: 30%;
+      /* background-color: #e7f360; */
+    }
+    .h-in-2{
+      height: 70%;
+    /* background-color: #ffffff; */
+  }
+
+  .h-in-2 img {
+    width: 45%;
+    max-width: 500px;
+    border-width: 12px;
+    border-radius: 20px;
+  }
+
+  .tw {
+    font-size: 25px;
+    /* text-align: center; */
+    line-height: 1.4;
+  }
+
+  .typewriter-text {
+    font-size: 30px;
+  }
+
+  .cursor {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .h-in{
+        height: 90vh;
+    }
+  .tw {
+    font-size: 28px;
+    /* text-align: center; */
+    line-height: 1.3;
+  }
+
+  .typewriter-text {
+    font-size: 30px;
+  }
+
+  .cursor {
+    font-size: 30px;
+  }
+
+  .tw-in {
+    font-size: 20px;
+    padding: 4px 8px;
+  }
+
+  .h-in-2 img {
+    width: 100%;
+    border-width: 8px;
+    border-radius: 15px;
+  }
+
+  .h-in {
+    gap: 30px;
+    padding: 30px 10px;
+  }
+
+  .h-in-1, .h-in-2 {
+    width: 100% !important;
+    padding: 0;
+  }
+}

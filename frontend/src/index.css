@@ -9,18 +9,18 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #000000, #000000);  /* Cool gradient */
+  background: linear-gradient(180deg, #ffffff, #ffffff);  /* Cool gradient */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #000000, #000000);  /* Reverse gradient on hover */
+  background: linear-gradient(180deg, #ffffff, #000000);  /* Reverse gradient on hover */
 }
 
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #000000 #000000;
+  scrollbar-color: #ffffff #ffffff;
 }
 
 *,
