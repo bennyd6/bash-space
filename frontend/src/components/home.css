@@ -1,0 +1,81 @@
+.h-main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-in{
+    width: 94%;
+    height: 90%;
+    background-color: black;
+    border-radius: 25px;
+    background-image: url('../assets/bg.png');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-in-1, .h-in-2{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.h-in-2{
+    width: 55%;
+}
+
+.h-in h1{
+    color: #ffffff;
+}
+
+.h-in-2 img {
+    width: 80%;
+    border: 20px solid rgb(67, 67, 67);
+    border-radius: 25px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.h-in-2 img:hover {
+    transform: scale(1.05) rotateZ(-1deg);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    border-color: #e7f36086; /* Aesthetic color change on hover */
+}
+
+
+.typewriter-text {
+  color: #e7f360;
+  font-size: 60px;
+}
+
+.cursor {
+font-size: 70px;
+  /* display: inline-block; */
+  animation: blink 1s infinite;
+  color: #e7f360;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.tw{
+    font-size: 50px;
+}
+
+.tw-in{
+    background-color: white;
+    color: black;
+    padding: 6px;
+    border-radius: 8px;
+}
