@@ -22,3 +22,17 @@
   scrollbar-width: thin;
   scrollbar-color: #000000 #000000;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.about-header,
+.about-card {
+  will-change: transform;
+}
