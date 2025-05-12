@@ -163,6 +163,7 @@ font-size: 70px;
     font-size: 28px;
     /* text-align: center; */
     line-height: 1.3;
+    padding: 50px;
   }
 
   .typewriter-text {
@@ -175,8 +176,9 @@ font-size: 70px;
 
   .tw-in {
     font-size: 20px;
-    padding: 4px 8px;
+    /* padding: 4px 8px; */
   }
+
 
   .h-in-2 img {
     width: 100%;
@@ -187,9 +189,9 @@ font-size: 70px;
   .h-in {
     gap: 30px;
     padding: 30px 10px;
-  }
+}
 
-  .h-in-1, .h-in-2 {
+.h-in-1, .h-in-2 {
     width: 100% !important;
     padding: 0;
   }
