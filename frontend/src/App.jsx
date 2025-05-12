@@ -3,6 +3,7 @@ import Home from './components/home';
 import Service from './components/service';
 import About from './components/about';
 import Footer from './components/footer';
+import pad from './assets/ipad.jpg'
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         }
       >
         <img
-          src="/linear.webp"
+          src={pad}
           alt="hero"
           height={720}
           width={1400}

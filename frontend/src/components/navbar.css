@@ -1,54 +1,55 @@
-.nav-main{
+.nav-main {
     width: 100%;
     height: 6vh;
-    /* background-color: aqua; */
-    margin-top: -3vh;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: fixed;
-    top: 25px;
-    background-color: rgb(255, 255, 255,0.3);
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust background opacity */
     backdrop-filter: blur(15px);
     z-index: 100;
+    padding: 0 20px; /* Adjust padding for smaller screens */
 }
 
-.nav-logo h1{
+.nav-logo h1 {
     font-family: 'Cal Sans';
     letter-spacing: 3px;
-    font-size: 23px;
+    font-size: 20px; /* Adjust font size for smaller screens */
 }
 
-.nav-in-1, .nav-in-2{
-    width: 40%;
-    height: 100%;
-    /* background-color: aqua; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 40px;
-    padding-left: 40px;
+.nav-in-1, .nav-in-2 {
+    display: none; /* Initially hide navigation links */
 }
 
-.nav-in-2{
-    padding-right: 40px;
-    justify-content: flex-end;
-}
-
-.nav-logo{
-    height: 100%;
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-in-1 a, .nav-in-2 a{
+.nav-in-1 a, .nav-in-2 a {
     text-decoration: none;
     font-family: 'Poppins';
     color: #000;
     font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-main {
+        height: 8vh; /* Adjust height for larger screens */
+    }
+
+    .nav-in-1, .nav-in-2 {
+        display: flex; /* Display navigation links in a row */
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px; /* Adjust gap between links */
+    }
+
+    .nav-in-2 {
+        justify-content: flex-end; /* Align links to the right */
+    }
+
+    .nav-logo {
+        width: auto; /* Adjust logo width */
+    }
+
+    .nav-logo h1 {
+        font-size: 23px; /* Restore font size for larger screens */
+    }
 }
