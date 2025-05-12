@@ -40,15 +40,36 @@
     width: 80%;
     border: 20px solid rgb(67, 67, 67);
     border-radius: 25px;
-    transition: all 0.4s ease-in-out;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.95) saturate(1);
+    transition: all 0.4s ease-in-out;
+    animation: pulseGlow 6s infinite ease-in-out;
 }
 
 /* Hover effect */
 .h-in-2 img:hover {
-    transform: scale(1.05) rotateZ(-1deg);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-    border-color: #e7f36086; /* Aesthetic color change on hover */
+    transform: scale(1.08) rotateZ(-1.5deg) translateY(-5px);
+    box-shadow: 0 12px 40px rgba(231, 243, 96, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-color: #e7f360;
+    filter: brightness(1.1) saturate(1.3);
+}
+
+/* Subtle glowing animation */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(231, 243, 96, 0.3);
+    }
+}
+
+.h-in-2 img:hover {
+    transform: scale(1.08) rotateZ(-1.5deg) translateY(-5px);
+    box-shadow: 0 12px 40px rgba(231, 243, 96, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-color: #e7f360;
+    filter: brightness(1.1) saturate(1.3);
+    backdrop-filter: blur(2px); /* Only works with transparency */
 }
 
 
