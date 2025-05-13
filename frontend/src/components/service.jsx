@@ -1,6 +1,7 @@
 import './service.css';
 import ServiceCard from './serviceCard';
 import { Fade } from 'react-awesome-reveal'; // 👈 import animation
+import { useEffect, useState } from 'react';
 
 export default function Service() {
   const services = [

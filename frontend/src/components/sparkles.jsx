@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { useEffect, useState } from 'react';
 
 const NUM_PARTICLES = 4000;
 
