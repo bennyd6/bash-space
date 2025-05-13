@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import pad from './assets/ipad.jpg'
 import Team from './components/team';
 import Contact from './components/contact';
+import { useEffect, useState } from 'react';
 
 function App() {
   const members = [
@@ -28,32 +29,48 @@ function App() {
     src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39",
   },
 ];
+const [showSplash, setShowSplash] = useState(true);
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowSplash(false);
+        }, 2000);
+
+        return () => clearTimeout(timer);
+    }, []);
 
   return (
     <div className="main">
-      <Home />
-      <Service />
-      <About
-  titleComponent={
-    <div>
-      <h1>Welcome to BashSpace</h1>
-      <span>Where imagination Meets Reality</span>
-    </div>
-  }
->
-  <img
-    src={pad}
-    alt="hero"
-    height={720}
-    width={1400}
-    draggable={false}
-  />
-</About>
+      {showSplash ? (
+  <div className="splash splash-exit">
+    <h1>Welcome To <span> Bash Space </span> </h1>
+  </div>
+) : (
+  <>
+    <Home />
+    <Service />
+    <About
+      titleComponent={
+        <div>
+          <h1>Welcome to BashSpace</h1>
+          <span>Where imagination Meets Reality</span>
+        </div>
+      }
+    >
+      <img
+        src={pad}
+        alt="hero"
+        height={720}
+        width={1400}
+        draggable={false}
+      />
+    </About>
+    {/* <Team members={members} autoplay /> */}
+    <Contact />
+    <Footer />
+  </>
+)}
 
-      {/* <Team members={members} autoplay /> */}
-      <Contact></Contact>
-        <Footer></Footer>
     </div>
   );
 }
