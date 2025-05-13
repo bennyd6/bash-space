@@ -6,7 +6,6 @@ import Footer from './components/footer';
 import pad from './assets/ipad.jpg'
 import Team from './components/team';
 import Contact from './components/contact';
-import { Analytics } from "@vercel/analytics/next"
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -69,7 +68,6 @@ const [showSplash, setShowSplash] = useState(true);
     {/* <Team members={members} autoplay /> */}
     <Contact />
     <Footer />
-    <Analytics/>
   </>
 )}
 
