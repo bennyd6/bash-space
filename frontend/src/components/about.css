@@ -5,10 +5,12 @@
   align-items: center;
   padding: 2rem 1rem;
   position: relative;
+  background-color: white;
 }
 
 .about-inner {
   min-width: 100vw;
+  /* background-color: white; */
   max-width: 90rem;
   padding: 5rem 1rem;
   perspective: 1000px;
@@ -161,5 +163,36 @@
   .about-outer {
     background-color: black;
     background-image: radial-gradient(#000000 1px, transparent 1px);
+  }
+}
+
+
+
+/* Default theme (Light and Dark mode) */
+.about-outer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  position: relative;
+  background-color: white; /* White background for light theme */
+  background-image: radial-gradient(#585858 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Dark theme (Overrides other styles, but keeps the background same) */
+@media (prefers-color-scheme: dark) {
+  .about-outer {
+    background-color: white; /* Keep white background in dark mode too */
+    background-image: radial-gradient(#585858 1px, transparent 1px); /* Keep dots */
+  }
+
+  .about-header h1 {
+    color: white; /* Adjust text color for dark mode */
+  }
+
+  .about-vertical-text {
+    color: #ccc; /* Adjust color for vertical text in dark mode */
   }
 }

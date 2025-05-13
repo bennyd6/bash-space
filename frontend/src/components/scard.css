@@ -7,13 +7,11 @@
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  background-size: cover;
-  background-position: center;
+  background-color: #f0f0f0; /* Optional: to have a background color */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 20px;
-  z-index: 1;  /* Set a lower z-index to make sure navbar is above */
+  z-index: 1;
 }
-
 
 .service-card:hover {
   transform: scale(1.03);
@@ -23,9 +21,9 @@
 .hover-bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
+  background: url('your-gif-url.gif') center center no-repeat;
+  background-size: cover; /* Ensure the GIF fits the container */
+  opacity: 1;
   transition: opacity 0.4s ease-in-out;
   z-index: 0;
 }
@@ -57,6 +55,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  opacity: 0; /* Hide text by default */
   transition: opacity 0.4s ease;
 }
 
@@ -72,5 +71,5 @@
 }
 
 .service-card:hover .card-content {
-  opacity: 1; /* Ensure text is always visible */
+  opacity: 1; /* Show text on hover */
 }

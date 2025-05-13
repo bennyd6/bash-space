@@ -195,6 +195,14 @@ font-size: 70px;
     width: 100% !important;
     padding: 0;
   }
+
+  .h-in-1 h1{
+   text-align: left;
+    /* font-size: 30px; */
+  }
+  .tw-in{
+    font-size: 70px;
+  }
 }
 
 
@@ -305,10 +313,10 @@ font-size: 70px;
 
 
 
-
+/* General Splash Styling (Same for both light and dark mode) */
 .splash {
     position: relative;
-    background-color: white;
+    background-color: white; /* Default background color for light mode */
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -325,45 +333,15 @@ font-size: 70px;
     background-size: 20px 20px;
 
     /* Fade grid near edges */
-    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0.1) 70%, transparent 100%);
-    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0.1) 70%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.1) 70%, transparent 100%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.1) 70%, transparent 100%);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: cover;
     mask-size: cover;
 }
 
-/* Optional dark mode */
-@media (prefers-color-scheme: dark) {
-    .splash {
-        background-color: black;
-        background-image:
-            linear-gradient(to right, #262626 1px, transparent 1px),
-            linear-gradient(to bottom, #262626 1px, transparent 1px);
-    }
-}
-
-/* Responsive for smaller devices */
-@media (max-width: 768px) {
-    .splash h1 {
-        font-size: 60px;
-    }
-
-    .splash h1 span {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .splash h1 {
-        font-size: 40px;
-    }
-
-    .splash h1 span {
-        font-size: 14px;
-    }
-}
-
+/* Responsive Typography for Heading */
 .splash h1 {
     font-size: 80px;
     font-weight: 300;
@@ -374,9 +352,48 @@ font-size: 70px;
     color: transparent;
 }
 
+/* Make 'span' inside the h1 more emphasized */
 .splash h1 span {
     font-weight: 600;
 }
+
+/* Make sure the background doesn't change for dark mode */
+@media (prefers-color-scheme: dark) {
+    /* No change to background color or grid */
+    .splash {
+        background-color: white; /* Keep white background in dark mode */
+        background-image:
+            linear-gradient(to right, #e4e4e7 1px, transparent 1px),
+            linear-gradient(to bottom, #e4e4e7 1px, transparent 1px); /* Keep same grid lines */
+    }
+
+    /* Ensure text contrast works in dark mode */
+    .splash h1 {
+        /* background: linear-gradient(162deg, rgba(0, 0, 0, 1) 0%, rgba(43, 43, 43, 1) 70%, rgba(156, 82, 180, 1) 84%, rgba(88, 90, 231, 1) 90%, rgba(240, 71, 116, 1) 96%); */
+    }
+}
+
+/* Responsive styling for different screen sizes */
+@media (max-width: 768px) {
+    .splash h1 {
+        font-size: 30px; /* Smaller font size for tablets */
+    }
+
+    .splash h1 span {
+        font-size: 60px; /* Smaller span text for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .splash h1 {
+        font-size: 30px; /* Smaller font size for mobile */
+    }
+
+    .splash h1 span {
+        font-size: 40px; /* Smaller span text for mobile */
+    }
+}
+
 
 
 /* Main content transition */

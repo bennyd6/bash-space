@@ -43,7 +43,7 @@ const [showSplash, setShowSplash] = useState(true);
     <div className="main">
       {showSplash ? (
   <div className="splash splash-exit">
-    <h1>Welcome To <span> Bash Space </span> </h1>
+    <h1>Welcome to <br /> <span> Bash Space </span> </h1>
   </div>
 ) : (
   <>

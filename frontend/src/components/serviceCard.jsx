@@ -1,8 +1,8 @@
 import './scard.css';
 
-export default function ServiceCard({ title, description, image, hoverImage }) {
+export default function ServiceCard({ title, description, hoverImage }) {
   return (
-    <div className="service-card" style={{ backgroundImage: `url(${image})` }}>
+    <div className="service-card">
       <div
         className="hover-bg"
         style={{ backgroundImage: `url(${hoverImage})` }}
@@ -14,4 +14,3 @@ export default function ServiceCard({ title, description, image, hoverImage }) {
     </div>
   );
 }
-

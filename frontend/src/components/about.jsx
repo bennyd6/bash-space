@@ -34,7 +34,7 @@ const About = ({ titleComponent, children }) => {
   const translateY = -100 * scrollProgress;
 
   return (
-    <div className="about-outer" ref={containerRef}>
+    <div className="about-outer" id="about" ref={containerRef}>
       <div className="about-inner">
         <div
           className="about-header"

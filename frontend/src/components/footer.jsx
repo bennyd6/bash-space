@@ -8,10 +8,10 @@ export default function Footer() {
             <div className="f-content">
                 <h2 className="brand-name">Bash Space</h2>
                 <div className="social-links">
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <a href="www.linkedin.com/in/benny-bandarupalli" target="_blank" rel="noopener noreferrer">
                         <img src={l} alt="LinkedIn" />
                     </a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/_bashspace_" target="_blank" rel="noopener noreferrer">
                         <img src={i} alt="Instagram" />
                     </a>
                 </div>
