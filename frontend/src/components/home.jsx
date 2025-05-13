@@ -2,6 +2,7 @@ import './home.css'
 import Navbar from './navbar'
 import TypewriterHero from './typewriter'
 import web from '../assets/webcom.png'
+import Fade from 'react-awesome-reveal';
 
 export default function Home(){
     return(
@@ -10,12 +11,14 @@ export default function Home(){
             <Navbar />
             <div className="h-in">   
                 <div className="h-in-1">
-                    <TypewriterHero />
+                    <Fade direction="up">
+                        <TypewriterHero />
+                    </Fade>
                 </div>
                 <div className="h-in-2">
-                    {/* <div className="web-out"> */}
+                    {/* <Fade direction="right"> */}
                         <img src={web} alt="" />
-                    {/* </div> */}
+                    {/* </Fade> */}
                 </div>
             </div>
         </div>

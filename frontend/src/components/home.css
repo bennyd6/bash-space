@@ -196,3 +196,110 @@ font-size: 70px;
     padding: 0;
   }
 }
+
+
+@media screen and (max-width: 1024px) {
+  .h-in {
+    flex-direction: column;
+    height: 90vh;
+    width: 95%;
+    padding: 30px 20px;  /* reduced padding to fit better */
+    gap: 40px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  .h-in-1, .h-in-2 {
+    width: 100% !important; 
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* ensure no content leaks */
+    padding: 10px;  /* added padding for spacing */
+  }
+
+  .h-in-1 {
+    height: 35%;  /* a bit more space for the title */
+  }
+
+  .h-in-2 {
+    height: 65%;  /* reduced height for image part */
+  }
+
+  .h-in-2 img {
+    width: 80%;  /* adjusted image width */
+    max-width: 400px;  /* limited max width */
+    border-width: 8px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .tw {
+    font-size: 28px; /* slightly reduced font size */
+    line-height: 1.4;
+    text-align: center; /* Centered text for better alignment */
+    padding: 20px;
+  }
+
+  .typewriter-text {
+    font-size: 32px; /* a bit larger for better visibility */
+  }
+
+  .cursor {
+    font-size: 35px; /* keep cursor readable */
+  }
+
+  .tw-in {
+    font-size: 22px;  /* improved size for mobile */
+    padding: 8px 16px; /* padding for better feel */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .h-in {
+    height: 90vh;
+    padding: 20px 15px;  /* smaller padding for tighter mobile screens */
+    gap: 20px;
+  }
+
+  .h-in-1, .h-in-2 {
+    width: 100% !important;
+    padding: 5px; /* reduced padding for more space */
+  }
+
+  .h-in-1 {
+    height: 30%;
+  }
+
+  .h-in-2 {
+    height: 70%;
+  }
+
+  .h-in-2 img {
+    width: 90%;  /* slightly adjusted image size */
+    border-width: 5px;
+    border-radius: 12px;
+  }
+
+  .tw {
+    font-size: 26px; /* smaller font for smaller screens */
+    line-height: 1.3;
+    padding: 20px;
+  }
+
+  .typewriter-text {
+    font-size: 28px;
+  }
+
+  .cursor {
+    font-size: 28px;
+  }
+
+  .tw-in {
+    font-size: 20px;
+    padding: 4px 10px;
+  }
+}
+
+
