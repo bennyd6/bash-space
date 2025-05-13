@@ -8,9 +8,9 @@
 }
 
 .h-in{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     width: 94%;
-    height: 90%;
+    height: 88%;
     background-color: black;
     border-radius: 25px;
     background-image: url('../assets/bg.png');

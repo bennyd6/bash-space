@@ -48,7 +48,6 @@ const [showSplash, setShowSplash] = useState(true);
 ) : (
   <>
     <Home />
-    <Service />
     <About
       titleComponent={
         <div>
@@ -65,6 +64,7 @@ const [showSplash, setShowSplash] = useState(true);
         draggable={false}
       />
     </About>
+      <Service />
     {/* <Team members={members} autoplay /> */}
     <Contact />
     <Footer />

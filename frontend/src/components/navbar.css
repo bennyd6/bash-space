@@ -1,15 +1,25 @@
 .nav-main {
-    width: 100%;
-    height: 6vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust background opacity */
-    backdrop-filter: blur(15px);
-    z-index: 100;
-    padding: 0 20px; /* Adjust padding for smaller screens */
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* position: sticky; */
+  /* top: 0; */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  z-index: 9999;  /* Set a high z-index to ensure navbar stays above */
+  padding: 0 20px;
+  transition: background-color 0.3s, padding 0.3s;
+  margin-top: -30px;
+  position: fixed;
+  top: 20px;
+}
+
+
+.nav-main.scrolled {
+    background-color: rgba(255, 255, 255, 1); /* Solid background when scrolled */
+    padding: 0 20px;  /* You can adjust padding for the scrolled state */
 }
 
 .nav-logo h1 {
@@ -18,6 +28,12 @@
     font-size: 20px; /* Adjust font size for smaller screens */
 }
 
+.nav-in-1{
+    margin-left: 30px;
+}
+.nav-in-2{
+    margin-right: 30px;
+}
 .nav-in-1, .nav-in-2 {
     display: none; /* Initially hide navigation links */
 }
@@ -31,25 +47,25 @@
 
 @media screen and (min-width: 768px) {
     .nav-main {
-        height: 8vh; /* Adjust height for larger screens */
+        height: 8vh;
     }
 
     .nav-in-1, .nav-in-2 {
-        display: flex; /* Display navigation links in a row */
+        display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 20px; /* Adjust gap between links */
+        gap: 20px;
     }
 
     .nav-in-2 {
-        justify-content: flex-end; /* Align links to the right */
+        justify-content: flex-end;
     }
 
     .nav-logo {
-        width: auto; /* Adjust logo width */
+        width: auto;
     }
 
     .nav-logo h1 {
-        font-size: 23px; /* Restore font size for larger screens */
+        font-size: 23px;
     }
 }
