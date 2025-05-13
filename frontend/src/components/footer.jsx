@@ -1,11 +1,21 @@
-import './footer.css'
+import './footer.css';
+import l from '../assets/linkedin.png'
+import i from '../assets/instagram.png'
 
-export default function Footer(){
-    return(
-        <>
-        <div className="f-main">
-            
-        </div>
-        </>
-    )
+export default function Footer() {
+    return (
+        <footer className="f-main">
+            <div className="f-content">
+                <h2 className="brand-name">Bash Space</h2>
+                <div className="social-links">
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <img src={l} alt="LinkedIn" />
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                        <img src={i} alt="Instagram" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    );
 }

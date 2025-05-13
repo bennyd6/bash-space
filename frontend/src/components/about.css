@@ -109,3 +109,33 @@
     font-size: 6rem;
   }
 }
+
+.about-vertical-text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: left top;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #555;
+  z-index: 10;
+  white-space: nowrap;
+  padding-left: 1rem;
+  margin-left: 100px;
+  margin-top: 250px;
+  font-weight: 200;
+}
+
+@media (max-width: 768px) {
+  .about-vertical-text {
+    font-size: 1.25rem;
+    left: -1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .about-vertical-text {
+    color: #ccc;
+  }
+}

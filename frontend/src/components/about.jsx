@@ -34,6 +34,7 @@ const About = ({ titleComponent, children }) => {
 
   return (
     <div className="about-outer" ref={containerRef}>
+        {/* <div className="about-vertical-text">ABOUT BASHSPACE</div> */}
       <div className="about-inner">
         <div
           className="about-header"
