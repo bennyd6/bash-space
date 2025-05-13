@@ -141,3 +141,25 @@
     color: #ccc;
   }
 }
+
+
+.about-outer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  position: relative;
+
+  /* Dot background using pure CSS */
+  background-color: white;
+  background-image: radial-gradient(#585858 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .about-outer {
+    background-color: black;
+    background-image: radial-gradient(#000000 1px, transparent 1px);
+  }
+}

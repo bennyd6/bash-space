@@ -343,62 +343,48 @@ font-size: 70px;
     }
 }
 
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+    .splash h1 {
+        font-size: 60px;
+    }
+
+    .splash h1 span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .splash h1 {
+        font-size: 40px;
+    }
+
+    .splash h1 span {
+        font-size: 14px;
+    }
+}
+
 .splash h1 {
     font-size: 80px;
     font-weight: 300;
-    /* background: linear-gradient(
-      165deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 1) 35%,
-      rgba(0, 148, 52, 1) 100%
-      ); */
-      background: #000000;
-      background: linear-gradient(162deg, rgba(0, 0, 0, 1) 0%, rgba(43, 43, 43, 1) 70%, rgba(156, 82, 180, 1) 84%, rgba(88, 90, 231, 1) 90%, rgba(240, 71, 116, 1) 96%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: transparent;
-    }
-    
-    .splash h1 span{
-  font-weight: 600;
+    background: linear-gradient(162deg, rgba(0, 0, 0, 1) 0%, rgba(43, 43, 43, 1) 70%, rgba(156, 82, 180, 1) 84%, rgba(88, 90, 231, 1) 90%, rgba(240, 71, 116, 1) 96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
 
+.splash h1 span {
+    font-weight: 600;
 }
 
 
-@keyframes splashOut {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    80% {
-        opacity: 1;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-}
-
-.main-2 {
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    /* background: linear-gradient(165deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 68%, rgba(0, 148, 52, 1) 100%); */
-    /* background-color: black; */
-    background: #000000;
-background: linear-gradient(162deg, rgba(0, 0, 0, 1) 0%, rgba(43, 43, 43, 1) 70%, rgba(156, 82, 180, 1) 84%, rgba(88, 90, 231, 1) 90%, rgba(240, 71, 116, 1) 96%);
-}
-
-.main-2-enter {
+/* Main content transition */
+.h-main-enter {
     animation: main2In 1.2s ease-out;
 }
 
+/* Main content fade-in effect */
 @keyframes main2In {
     0% {
         opacity: 0;
@@ -410,7 +396,8 @@ background: linear-gradient(162deg, rgba(0, 0, 0, 1) 0%, rgba(43, 43, 43, 1) 70%
     }
 }
 
-.main-2-in {
+/* Ensure the inner content scales well on smaller screens */
+.h-main-in {
     width: 100%;
     height: 95%;
     border-radius: 25px;
@@ -418,4 +405,24 @@ background: linear-gradient(162deg, rgba(0, 0, 0, 1) 0%, rgba(43, 43, 43, 1) 70%
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+}
+
+
+.h-main {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  transition: opacity 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
 }
