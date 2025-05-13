@@ -343,17 +343,19 @@ font-size: 70px;
 
 /* Responsive Typography for Heading */
 .splash h1 {
-    font-size: 80px;
+    font-size: 50px;
     font-weight: 300;
     background: linear-gradient(162deg, rgba(0, 0, 0, 1) 0%, rgba(43, 43, 43, 1) 70%, rgba(156, 82, 180, 1) 84%, rgba(88, 90, 231, 1) 90%, rgba(240, 71, 116, 1) 96%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-}
-
-/* Make 'span' inside the h1 more emphasized */
-.splash h1 span {
+    text-align: center;
+  }
+  
+  /* Make 'span' inside the h1 more emphasized */
+  .splash h1 span {
+  font-size: 80px;
     font-weight: 600;
 }
 
