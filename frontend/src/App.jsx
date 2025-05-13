@@ -8,6 +8,7 @@ import Team from './components/team';
 import Contact from './components/contact';
 import { useEffect, useState } from 'react';
 
+
 function App() {
   const members = [
   {
