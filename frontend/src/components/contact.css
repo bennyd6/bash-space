@@ -1,7 +1,7 @@
 .con-main {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to top, black , white);
+    background: linear-gradient(to top, black, white);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -10,7 +10,6 @@
     padding: 1rem;
     box-sizing: border-box;
 }
-
 
 .sparkle-canvas {
     width: 100%;
@@ -36,6 +35,9 @@
     gap: 1rem;
     color: white;
     box-sizing: border-box;
+    transform: scale(0.95);
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .contact-title {
@@ -48,6 +50,11 @@
 .contact-form label {
     font-size: 1rem;
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-form label:hover {
+    color: #ffffff; /* You can adjust this if you'd like */
 }
 
 .contact-form input,
@@ -60,6 +67,7 @@
     color: white;
     outline: none;
     resize: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .contact-form input::placeholder,
@@ -67,17 +75,50 @@
     color: #ccc;
 }
 
+.contact-form input:hover,
+.contact-form textarea:hover {
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .contact-form button {
     padding: 0.75rem;
-    /* background-color: #00bcd4; */
     color: black;
     font-weight: bold;
+    background-color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-form button:hover {
-    /* background-color: #0097a7; */
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.contact-form button:active {
+    transform: translateY(1px);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid #ffffff;
+}
+
+.contact-form input:focus::placeholder,
+.contact-form textarea:focus::placeholder {
+    color: #ffffff;
 }

@@ -35,19 +35,22 @@ function App() {
       <Home />
       <Service />
       <About
-        titleComponent={
-          <>
-          </>
-        }
-      >
-        <img
-          src={pad}
-          alt="hero"
-          height={720}
-          width={1400}
-          draggable={false}
-        />
-      </About>
+  titleComponent={
+    <div>
+      <h1>Welcome to BashSpace</h1>
+      <span>Where imagination Meets Reality</span>
+    </div>
+  }
+>
+  <img
+    src={pad}
+    alt="hero"
+    height={720}
+    width={1400}
+    draggable={false}
+  />
+</About>
+
       {/* <Team members={members} autoplay /> */}
       <Contact></Contact>
         <Footer></Footer>
